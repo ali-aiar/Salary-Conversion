@@ -20,5 +20,4 @@ class ConversionController:
         return salary
 
     def get_salary(self, salary_id: int):
-        # Retrieve the salary from the data salary_data.json
         return self.salary.salary_by_user_id(salary_id, self.json_file)

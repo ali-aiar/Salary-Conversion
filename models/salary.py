@@ -21,4 +21,3 @@ class Salary:
             for salary in data['array']:
                 if salary['id'] == user_id:
                     return cls.from_json(json.dumps(salary))
-

@@ -1,6 +1,8 @@
 import os
 from PyQt6.QtWidgets import QApplication
 
+from config import config
+
 from controllers.conversion_controller import ConversionController
 from controllers.salary_controller import SalaryController
 
@@ -12,7 +14,6 @@ from models.user import User
 
 from views.salary_view import SalaryView
 
-from config import config
 
 config = config['default']
 file_path = (os.path.dirname(__file__)) + '/data/salary_data.json'

@@ -1,6 +1,6 @@
+import os
 from PyQt6.QtWidgets import QMainWindow,  QTableWidgetItem
 from PyQt6 import uic, QtCore
-import os
 
 
 class SalaryView(QMainWindow):

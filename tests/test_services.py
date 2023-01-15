@@ -22,11 +22,9 @@ class TestConversionService(unittest.TestCase):
 
     def test_update_exchange_rate(self):
         self.coversion_service.update_exchange_rate('IDR', 'USD')
-        # print(self.coversion_service.exchange_rate)
         self.assertNotEqual(self.coversion_service.exchange_rate, 0)
 
     def test_convert_salary(self):
-        # test_update_exchange_rate
         self.coversion_service.update_exchange_rate('IDR', 'USD')
 
         # convert the salary
@@ -34,7 +32,6 @@ class TestConversionService(unittest.TestCase):
             '/data/salary_data.json'
         salary = Salary.salary_by_user_id(1, file_path)
         self.coversion_service.convert_salary(salary)
-        # print(salary.converted_user_salary)
         self.assertNotEqual(salary.converted_user_salary,
                             salary.user_salary_in_IDR)
         self.assertEqual(salary.converted_currency, "USD")
